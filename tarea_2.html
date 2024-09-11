@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <style>
+      
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #004d40;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .personal-details {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .personal-details img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00796b;
+            margin-right: 20px;
+        }
+
+        .details {
+            max-width: 500px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #00796b;
+            background-color: #b2dfdb;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #004d40;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+
+        td {
+            background-color: #b2dfdb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .personal-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .personal-details img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="section" id="personal-info">
+            <h1>Hoja de Vida</h1>
+            <div class="personal-details">
+                <img src="./foto de perfil.jpg " alt="">
+                <div class="details">
+                    <h2>Maykel Josué Menéndez Vélez</h2>
+                    <p><strong>Teléfono:</strong> 0991 744 464</p>
+                    <p><strong>Año de Nacimiento:</strong> 12 de marzo de 2004</p>
+                    <p><strong>Ocupación:</strong> Estudiante de Ingenieria en Software</p>
+                    <p><strong>Correo:</strong> josuemenendezv@gmail.com</p>
+                    <p><strong>Dirección:</strong> Calle 23 de octubre, av anibal san andres, Jaramijó, Ecuador</p>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="section" id="education">
+            <h2>Estudios Realizados</h2>
+            <ul>
+                <li>Ingenieria en Software - Universidad Laica Eloy Alfaro de Manabí (2023) Cuarto Semestre</li>
+                <li>Chofer profesional de la republica del Ecuador - Sindicato de Choferes de Tarqui (2023 - 2024)</li>
+            </ul>
+        </div>
+
+       
+        <div class="section" id="experience">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+                <li><strong>Desarrollador Web - Empresa DEF</strong> (2020-2023)
+                    <p>Desarrollé y mantuve aplicaciones web usando tecnologías modernas.</p>
+                </li>
+                <li><strong>Analista de Sistemas - Empresa GHI</strong> (2019-2020)
+                    <p>Participé en el análisis y diseño de sistemas informáticos.</p>
+                </li>
+            </ul>
+        </div>
+
+      
+        <div class="section" id="trainings">
+            <h2>Capacitaciones</h2>
+            <ul>
+                <li>Curso de levantamiento de requisitos - Plataforma Online (2021)</li>
+                <li>Curso en derechos humanos - Centro de Formación (2022)</li>
+                <li>Certificación en ingles B1 - Instituto de Idiomas (2024)</li>
+            </ul>
+        </div>
+
+       
+        <div class="section" id="references">
+            <h2>Referencias Personales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cargo/Profesión</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>María López</td>
+                        <td>Directora de TI</td>
+                        <td>+34 600 987 654</td>
+                        <td>maria.lopez@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro Gómez</td>
+                        <td>Gerente de Proyectos</td>
+                        <td>+34 600 321 456</td>
+                        <td>pedro.gomez@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Fernández</td>
+                        <td>Consultora de Tecnología</td>
+                        <td>+34 600 654 321</td>
+                        <td>ana.fernandez@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
