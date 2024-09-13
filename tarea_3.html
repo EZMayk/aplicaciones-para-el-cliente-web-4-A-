@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea_3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(206, 224, 233);
+            color: rgb(0, 0, 0);
+            margin: 50px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        th {
+            background-color: rgb(0, 134, 175);
+            color: #000000;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+        }
+        th, td {
+            padding: 25px;
+            text-align: center;
+        }
+        button {
+            width: 125px;
+            padding: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="registro">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Registro de Clientes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Cédula:</th>
+                    <td><input type="text" name="cedula" autofocus required/></td>
+                </tr>
+                <tr>
+                    <th>Apellidos:</th>
+                    <td><input type="text" name="apellidos" required/></td>
+                </tr>
+                <tr>
+                    <th>Nombres:</th>
+                    <td><input type="text" name="nombres" required/></td>
+                </tr>
+                <tr>
+                    <th>Dirección:</th>
+                    <td><input type="text" name="direccion" required/></td>
+                </tr>
+                <tr>
+                    <th>Teléfono:</th>
+                    <td><input type="text" name="telefono" required/></td>
+                </tr>
+                <tr>
+                    <th>E-mail:</th>
+                    <td><input type="email" name="email" required/></td>
+                </tr>
+                <tr>
+                    <th>Ciudad:</th>
+                    <td><input type="text" name="ciudad" required/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" id="boton">Enviar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <script>
+        const form = document.getElementById('registro');
+        const submitButton = document.getElementById('boton');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('El cliente  ha sido registrado con éxito!');
+            form.submit();
+        });
+    </script>
+
+</body>
+</html>
