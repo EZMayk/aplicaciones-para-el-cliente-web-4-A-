@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con 2 números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Operaciones con dos números</h1>
+
+    <label for="num1">Ingresa el primer número:</label><br>
+    <input type="number" id="num1"><br>
+
+    <label for="num2">Ingresa el segundo número:</label><br>
+    <input type="number" id="num2"><br>
+
+    <button onclick="realizarOperaciones()">Calcular</button>
+
+    <div class="results" id="resultados"></div>
+
+    <script>
+        function realizarOperaciones() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let resultados = '';
+
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('resultados').innerHTML = "<p style='color:red;'>Por favor, ingresa números válidos.</p>";
+                return;
+            }
+
+            let suma = num1 + num2;
+            resultados += `<p>SUMA: ${num1} + ${num2} = ${suma}</p>`;
+
+            let resta = num1 - num2;
+            resultados += `<p>RESTA: ${num1} - ${num2} = ${resta}</p>`;
+
+            let multiplicacion = num1 * num2;
+            resultados += `<p>MULTIPLICACION: ${num1} * ${num2} = ${multiplicacion}</p>`;
+
+            if (num2 !== 0) {
+                let division = num1 / num2;
+                resultados += `DIVISION: ${num1} / ${num2} = ${division}</p>`;
+            } else {
+                resultados += `<p>DIVISION: No se puede dividir entre 0</p>`;
+            }
+
+            let mod = num1 % num2;
+            resultados += `<p>MOD: ${num1} % ${num2} = ${mod}</p>`;
+
+            document.getElementById('resultados').innerHTML = resultados;
+        }
+    </script>
+
+</body>
+</html>
